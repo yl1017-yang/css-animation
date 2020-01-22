@@ -1,0 +1,96 @@
+@charset "UTF-8";
+
+
+
+a{cursor:pointer;}
+
+
+/* 버튼 애니메이션 효과 */
+.btnani, .btnani:before, .btnani:after{transition:all .4s;-webkit-transition:all .4s;-moz-transition:all .4s;-o-transition:all .4s;-ms-transition:all .4s;}
+
+/* 버튼테두리 */
+.btnborder{background:#fff;padding:20px 40px;margin:10px;display:inline-block;border:3px solid #999;}
+.btnborder:hover{border:3px solid #111;}
+
+/* 버튼배경 */
+.btnback{background:#999;padding:20px 40px;margin:10px;display:inline-block;}
+.btnback:hover{background:#333;color:#fff;}
+
+/* 버튼라인아래-중간 */
+.btnlinecenter{position:relative;display:inline-block;padding:20px 20px;border:1px solid #ddd;}
+.btnlinecenter:hover{color:#25A18E;}
+.btnlinecenter:after{content:'';height:4px;position:absolute;left:0;right:0;bottom:0;opacity:1;width:0;background-color:#fff;display:block;margin:0 auto;}
+.btnlinecenter:hover:after{width:100%;background-color:#25A18E;transition:opacity 0.3s,width 0.3s;}
+
+/* 버튼라인아래-화살표 */
+.btnlinearrow{position:relative;display:inline-block;padding:20px 0;margin:0 20px;}
+.btnlinearrow:hover{color:#25A18E;}
+.btnlinearrow:before{content:'';height:2px;position:absolute;left:57px;bottom:5px;opacity:1;width:15px;background-color:#25A18E;display:block;border-radius:10px;
+transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);-ms-transform:rotate(45deg);
+}
+.btnlinearrow:after{content:'';height:2px;position:absolute;left:0;bottom:0;opacity:1;width:70px;background-color:#25A18E;display:block;border-radius:10px;}
+.btnlinearrow:hover:before{left:100%;z-index:1;margin-left:-13px;}
+.btnlinearrow:hover:after{width:100%;}
+
+/* 버튼 기본-화살표 */
+.btnarrow{position:relative;display:inline-block;padding:20px 50px 20px 20px;margin:20px 0;border:1px solid #ddd;}
+.btnarrow:before{content:'';height:2px;position:absolute;left:80%;top:46%;opacity:1;width:10px;background-color:#25A18E;display:block;border-radius:10px;;
+transform:rotate(45deg);-webkit-transform:rotate(45deg);-moz-transform:rotate(45deg);-o-transform:rotate(45deg);-ms-transform:rotate(45deg);
+}
+.btnarrow:after{content:'';height:2px;position:absolute;left:80%;top:55%;opacity:1;width:10px;background-color:#25A18E;display:block;border-radius:10px;;
+transform:rotate(-45deg);-webkit-transform:rotate(-45deg);-moz-transform:rotate(-45deg);-o-transform:rotate(-45deg);-ms-transform:rotate(-45deg);
+}
+.btnarrow:hover:before, .btnarrow:hover:after{left:85%;background-color:#000;}
+
+
+/* 버튼슬라이드-왼쪽 */
+.btnslideleft{position:relative;z-index:1;border:1px solid #25A18E;padding:20px 50px;margin:10px;}
+.btnslideleft:hover{color:#fff;}
+.btnslideleft:after{content:"";width:0%;height:100%;top:0;position:absolute;left:0;background:#25A18E;}
+.btnslideleft:hover:after{width:100%;z-index:-1;}
+
+/* 버튼슬라이드-아래 */
+.btnslidetop{position:relative;z-index:1;border:1px solid #FF3E41;padding:20px 50px;margin:10px;}
+.btnslidetop:hover{color:#fff;}
+.btnslidetop:after{content:"";width:100%;height:0%;top:0;position:absolute;left:0;background:#FF3E41;}
+.btnslidetop:hover:after{height:100%;z-index:-1;}
+
+
+
+
+
+
+/* 아이콘 바운스1 */
+.iconbounce{display:inline-block;padding:20px 30px;margin-top:20px;background:#25A18E;color:#fff;}
+.iconbounce:hover{
+    animation:bounce 1s both ease-in-out infinite;
+    -webkit-animation:bounce 1s both ease-in-out infinite;
+}
+@-webkit-keyframes bounce{
+    0%,100%{-webkit-transform:translateY(0);transform:translateY(0)}
+    50%{-webkit-transform:translateY(-8px);transform:translateY(-8px)}
+}
+@keyframes bounce{
+    0%,100%{-webkit-transform:translateY(0);transform:translateY(0)}
+    50%{-webkit-transform:translateY(-8px);transform:translateY(-8px)}
+}
+
+/* 아이콘 바운스2 */
+.iconbounce2{display:inline-block;padding:20px 30px;margin-top:20px;background:#F46197;color:#fff;}
+.iconbounce2:hover{
+    animation:bounce2 .5s alternate infinite;
+    -webkit-animation:bounce2 .5s alternate infinite;
+}
+
+
+
+@-webkit-keyframes bounce2{
+    0%{-webkit-transform:translateY(0);transform:translateY(0)}
+    50%{color:#000}
+    100%{-webkit-transform:translateY(-10px);transform:translateY(-10px)}
+}
+@keyframes bounce2{
+    0%{-webkit-transform:translateY(0);transform:translateY(0)}
+    50%{color:#000}
+    100%{-webkit-transform:translateY(-10px);transform:translateY(-10px)}
+}
